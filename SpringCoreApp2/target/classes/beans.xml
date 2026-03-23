@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  <!-- dependent bean-->
+  <bean id="e" class="com.klu.beans.Employee">
+  <constructor-arg name="eid" value="2400031833"></constructor-arg>
+  <constructor-arg name="ename" value="subash"></constructor-arg>
+  <constructor-arg name="design" value="software developer"></constructor-arg>
+  <constructor-arg name="sal" value="100000"> </constructor-arg>
+  <constructor-arg name="dept" ref="d"></constructor-arg>
+  
+  </bean>
+  <bean id="d" class= "com.klu.beans.Department">
+  <constructor-arg name="depid" value="101"></constructor-arg>
+  <constructor-arg name= "deptname" value="CSE"></constructor-arg>
+  
+  </bean>
+</beans>
